@@ -1,0 +1,65 @@
+### Get all user
+GET http://localhost:2000/api/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1aXMuYXJkaWxhQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoic2Fsa2Zqc2RsYWtqZmxkYXM7amZkbHNhZml1aGV3aXJmaCIsImlhdCI6MTY2MTkwOTI1MCwiZXhwIjoxNjYxOTA5MzcwfQ.yHeS9SzEEgSe_xxXnRs4GwO5Q5cbeZxVGQveOt9yLKg
+
+### Get one user
+GET http://localhost:2000/api/user/56IMXtKwbHqbi8KCUB9cv
+
+### Save a new user
+POST http://localhost:2000/api/user/signup
+Content-Type: application/json
+
+{
+  "name": "Luis",
+  "lastName": "Ardila",
+  "email": "luis.ardila@gmail.com",
+  "password": "salkfjsdlakjfldas;jfdlsafiuhewirfh"
+
+}
+
+### Delete a user by id
+DELETE http://localhost:2000/api/user/y_omIXwPabKD8nwrmD0X_
+
+### Update a user by id
+PATCH http://localhost:2000/api/user/y_omIXwPabKD8nwrmD0X_
+Content-Type: application/json
+
+{
+  "email": "caleb.parra@gmail.com"
+}
+
+### Save a url
+POST http://localhost:2000/api/url/
+Content-Type: application/json
+
+{
+  "link": "https://www.linkedin.com/feed/update/urn:li:share:6965311557555646464?utm_source=linkedin_share&utm_medium=member_desktop_share&utm_content=post"
+}
+
+### Get url
+GET http://localhost:2000/api/url/ns1gn_
+
+### 404 error
+GET http://localhost:2000/route/that/does/not/exists
+
+### Login
+POST http://localhost:2000/api/user/login
+Content-Type: application/json
+
+{
+  "email": "luis.ardila@gmail.com",
+  "password": "salkfjsdlakjfldas;jfdlsafiuhewirfh"
+}
+
+### Create role
+POST http://localhost:2000/api/role
+Content-Type: application/json
+
+{
+  "id": "1",
+  "name": "admin"
+}
+
+### Get a role
+GET http://localhost:2000/api/role/1
+Content-Type: application/json
